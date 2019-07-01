@@ -1,0 +1,5 @@
+
+Display month using date object
+
+
+https://jsfiddle.net/AyushiMalviya/145csj2p/1/
