@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CallBack Fuction</title>
+
+
+	<script
+  src="https://code.jquery.com/jquery-3.4.1.js"
+  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+  crossorigin="anonymous"></script>
+		
+	<script type="text/javascript">
+		
+		$(document).ready(function(){
+			
+			function red()
+			{
+				$("input[name='first']").fadeOut("slow", function(){
+					$("input[type='text']").css('background','red');
+				});
+			}
+			function green(){
+				$("#click").slideToggle("slow", function(){
+					$("input[type='text']").css('background','green');
+				});
+			}
+			function blue(){
+				$("input[name='first'],input[name='second']").hide(function(){
+					$("input[type='text']").css('background','blue');
+				});
+			
+			}
+			$("#click").click(function(){
+				
+				var input=$("input[name='color']:checked").val();
+				console.log(input);
+				switch(input){
+				case 'red':red();break;
+					
+
+				case 'green':green();break;
+
+				case 'blue':blue();
+			}
+			});
+
+		});
+	</script>
+</head>
+<body>
+	
+
+
+	
+</ol>
+	<input type="text" name="first"><br>
+	<input type="text" name="second"><br>
+	<input type="text" name="third"><br>
+	<input type="text" name="fourth"><br>
+<label><input type="radio" value="red" name="color">Red</label>
+	<label><input type="radio" value="green" name="color">Green</label>
+	<label><input type="radio" value="blue" name="color">Blue</label>
+	<button id="click">Change</button>
+
+</body>
+</html>
